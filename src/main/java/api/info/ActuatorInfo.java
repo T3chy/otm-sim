@@ -8,7 +8,7 @@ public class ActuatorInfo {
     public long id;
 
     /** Type of the actuator. */
-//    public AbstractActuator.Type type;
+    public AbstractActuator.Type type;
 
     public ActuatorInfo(AbstractActuator x){
         this.id = x.id;
@@ -19,9 +19,9 @@ public class ActuatorInfo {
         return id;
     }
 
-//    public AbstractActuator.Type getType() {
-//        return type;
-//    }
+    public AbstractActuator.Type getType() {
+        return type;
+    }
 
     @Override
     public String toString() {

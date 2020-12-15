@@ -4,6 +4,7 @@ import actuator.ActuatorSignal;
 import actuator.SignalPhase;
 import common.Node;
 
+import actuator.AbstractActuator;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,11 +27,13 @@ public class SignalInfo extends ActuatorInfo {
         return signal_phases;
     }
 
+    @Override
+    public AbstractActuator.Type getType(){
+	    return AbstractActuator.Type.signal;
+    }
     public long getNode_id() {
         return node_id;
     }
-
-    @Override
     public String toString() {
         return "SignalInfo{" +
                 "id=" + id +
